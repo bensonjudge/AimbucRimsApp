@@ -20,7 +20,7 @@
 name: Build and deploy Python app to Azure Web App
 
 env:
-  AZURE_WEBAPP_NAME: MyFlaskApp   # set this to the name of your Azure Web App
+  AZURE_WEBAPP_NAME: aimbuc-rims   # set this to the name of your Azure Web App
   PYTHON_VERSION: '3.13'              # set this to the Python version to use
 
 on:
@@ -82,5 +82,5 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ env.MyFlaskApp}}
+          app-name: ${{ env.aimbuc-rims}}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
